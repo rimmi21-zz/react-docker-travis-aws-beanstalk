@@ -37,4 +37,14 @@ And then using the container id, we run the container. In my case, the container
 
 Therefore the command to run the container would be:
 
-`docker run -it -p 58d8f879c170`
+`docker run -it -p 3000:3000 58d8f879c170`
+
+Now, let's say we make changes to our application. So, instead off stopping the container and running them again and again, we use **Docker Volume**.
+
+By Setting up Docker Volume, any file that we are making changes to, in our local File System(FS), gets propagated into the running container. Then the react server inside that container finds that change, and then it shows up the change in the server!
+
+To do that, instead of the simple docker run. We use:
+
+`docker run -it -p 3000:3000 -v /app/node_modules -v $(pwd):/app 58d8f879c170`
+
+Looks very complex! So now, we'll build a docker compose file to do everything we did in that above command!
