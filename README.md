@@ -48,3 +48,5 @@ To do that, instead of the simple docker run. We use:
 `docker run -it -p 3000:3000 -v /app/node_modules -v $(pwd):/app 58d8f879c170`
 
 Looks very complex! So now, we'll build a docker compose file to do everything we did in that above command!
+
+We've also added the `npm run test` functionality to our **docker-compose.yml** file.
