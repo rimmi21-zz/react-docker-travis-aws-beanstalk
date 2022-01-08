@@ -50,3 +50,5 @@ To do that, instead of the simple docker run. We use:
 Looks very complex! So now, we'll build a docker compose file to do everything we did in that above command!
 
 We've also added the `npm run test` functionality to our **docker-compose.yml** file.
+
+Then
